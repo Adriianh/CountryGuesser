@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "673191990406",
+    "project_id": "country-guesser-app",
+    "storage_bucket": "country-guesser-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673191990406:android:d6221cf65dbc0047a86d07",
+        "android_client_info": {
+          "package_name": "com.github.adriianh.countryguesser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo-IaXj5B-8P-1Am6X0f96LVeNJlx07L0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
