@@ -14,7 +14,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
-import com.github.adriianh.countryguesser.country.presentation.screen.HomeScreen
+import com.github.adriianh.countryguesser.country.presentation.screen.Navigation
 import com.github.adriianh.countryguesser.country.presentation.ui.theme.CountryGuesserTheme
 import com.github.adriianh.countryguesser.country.presentation.viewmodel.AuthViewModel
 import com.github.adriianh.countryguesser.util.Event
@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    HomeScreen()
+                    Navigation()
                 }
             }
         }

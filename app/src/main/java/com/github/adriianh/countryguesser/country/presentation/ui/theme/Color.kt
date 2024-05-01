@@ -1,5 +1,7 @@
 package com.github.adriianh.countryguesser.country.presentation.ui.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -13,6 +15,11 @@ val Pink40 = Color(0xFF7D5260)
 val Azure = Color(0xFF2E83EC)
 val BleuDeFrance = Color(0xFF348BE7)
 val JordyBlue = Color(0xFFACCCf7)
-val BlueDark = Color(0xFF334155)
+val Charcoal = Color(0xFF334155)
+val LapisBlue = Color(0xFF184079)
 
 val EerieBlack = Color(0xFF191919)
+
+val backgroundColor
+    @Composable
+    get() = if (isSystemInDarkTheme()) LapisBlue else Color.White

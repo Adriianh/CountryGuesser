@@ -4,27 +4,15 @@
     <option name="deviceSelectionList">
       <list>
         <PersistentDeviceSelectionData>
-          <option name="api" value="29" />
-          <option name="brand" value="samsung" />
-          <option name="codename" value="x1q" />
-          <option name="id" value="x1q" />
-          <option name="manufacturer" value="Samsung" />
-          <option name="name" value="Galaxy S20" />
-          <option name="screenDensity" value="480" />
-          <option name="screenX" value="1440" />
-          <option name="screenY" value="3200" />
-          <option name="selected" value="true" />
-        </PersistentDeviceSelectionData>
-        <PersistentDeviceSelectionData>
           <option name="api" value="34" />
           <option name="brand" value="google" />
-          <option name="codename" value="shiba" />
-          <option name="id" value="shiba" />
+          <option name="codename" value="husky" />
+          <option name="id" value="husky" />
           <option name="manufacturer" value="Google" />
-          <option name="name" value="Pixel 8" />
-          <option name="screenDensity" value="420" />
-          <option name="screenX" value="1080" />
-          <option name="screenY" value="2400" />
+          <option name="name" value="Pixel 8 Pro" />
+          <option name="screenDensity" value="390" />
+          <option name="screenX" value="1008" />
+          <option name="screenY" value="2244" />
           <option name="selected" value="true" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
@@ -94,17 +82,6 @@
           <option name="screenY" value="1080" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
-          <option name="api" value="28" />
-          <option name="brand" value="samsung" />
-          <option name="codename" value="dreamlte" />
-          <option name="id" value="dreamlte" />
-          <option name="manufacturer" value="Samsung" />
-          <option name="name" value="Galaxy S8" />
-          <option name="screenDensity" value="480" />
-          <option name="screenX" value="2220" />
-          <option name="screenY" value="1080" />
-        </PersistentDeviceSelectionData>
-        <PersistentDeviceSelectionData>
           <option name="api" value="33" />
           <option name="brand" value="google" />
           <option name="codename" value="felix" />
@@ -136,17 +113,6 @@
           <option name="screenDensity" value="320" />
           <option name="screenX" value="1848" />
           <option name="screenY" value="2960" />
-        </PersistentDeviceSelectionData>
-        <PersistentDeviceSelectionData>
-          <option name="api" value="34" />
-          <option name="brand" value="google" />
-          <option name="codename" value="husky" />
-          <option name="id" value="husky" />
-          <option name="manufacturer" value="Google" />
-          <option name="name" value="Pixel 8 Pro" />
-          <option name="screenDensity" value="390" />
-          <option name="screenX" value="1008" />
-          <option name="screenY" value="2244" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
           <option name="api" value="30" />
@@ -204,6 +170,17 @@
           <option name="screenY" value="2208" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="q5q" />
+          <option name="id" value="q5q" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy Z Fold5" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1812" />
+          <option name="screenY" value="2176" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
           <option name="api" value="30" />
           <option name="brand" value="google" />
           <option name="codename" value="r11" />
@@ -227,6 +204,17 @@
           <option name="screenY" value="2340" />
         </PersistentDeviceSelectionData>
         <PersistentDeviceSelectionData>
+          <option name="api" value="34" />
+          <option name="brand" value="google" />
+          <option name="codename" value="shiba" />
+          <option name="id" value="shiba" />
+          <option name="manufacturer" value="Google" />
+          <option name="name" value="Pixel 8" />
+          <option name="screenDensity" value="420" />
+          <option name="screenX" value="1080" />
+          <option name="screenY" value="2400" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
           <option name="api" value="33" />
           <option name="brand" value="google" />
           <option name="codename" value="tangorpro" />
@@ -236,6 +224,17 @@
           <option name="screenDensity" value="320" />
           <option name="screenX" value="1600" />
           <option name="screenY" value="2560" />
+        </PersistentDeviceSelectionData>
+        <PersistentDeviceSelectionData>
+          <option name="api" value="29" />
+          <option name="brand" value="samsung" />
+          <option name="codename" value="x1q" />
+          <option name="id" value="x1q" />
+          <option name="manufacturer" value="Samsung" />
+          <option name="name" value="Galaxy S20" />
+          <option name="screenDensity" value="480" />
+          <option name="screenX" value="1440" />
+          <option name="screenY" value="3200" />
         </PersistentDeviceSelectionData>
       </list>
     </option>

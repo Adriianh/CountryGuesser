@@ -1,12 +1,10 @@
 package com.github.adriianh.countryguesser.country.presentation.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.github.adriianh.countryguesser.country.data.local.UserPreferences
 import com.github.adriianh.countryguesser.country.domain.model.User
-import com.github.adriianh.countryguesser.country.domain.repository.UserRepository
 import com.github.adriianh.countryguesser.country.domain.usecase.user.DeleteUserUseCase
 import com.github.adriianh.countryguesser.country.domain.usecase.user.GetUserUseCase
 import com.github.adriianh.countryguesser.country.domain.usecase.user.GetUsersUseCase
@@ -146,6 +144,14 @@ class AuthViewModel @Inject constructor(
                 }
 
             handleLoading(false)
+        }
+    }
+
+    fun logout() {
+        viewModelScope.launch {
+            userPreferences.clearSelectedUser()
+            _selectedAccount.update { null }
+            _hasSelectedAccount.update { false }
         }
     }
 }

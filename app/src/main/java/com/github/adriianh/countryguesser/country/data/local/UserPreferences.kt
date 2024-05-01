@@ -13,6 +13,11 @@ class UserPreferences(context: Context) {
         sharedPreferences.edit().putString("selectedUser", user.toJson()).apply()
     }
 
+    fun clearSelectedUser() {
+        sharedPreferences.edit().remove("selectedUser").apply()
+        sharedPreferences.edit().remove("score").apply()
+    }
+
     fun getSelectedUser(): User? {
         return sharedPreferences.getString("selectedUser", null)?.toUser()
     }

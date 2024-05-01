@@ -52,7 +52,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.9"
+        kotlinCompilerExtensionVersion = "1.5.12"
     }
     packaging {
         resources {
@@ -113,6 +113,11 @@ dependencies {
     implementation(libs.compose.shimmer)
     implementation(libs.haze)
     implementation(libs.haze.materials)
+    implementation(libs.glassmorphic.composables)
+    implementation(libs.core.ktx)
+
+    /* Icons */
+    implementation(libs.feather)
 }
 
 kapt {
