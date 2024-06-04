@@ -30,7 +30,7 @@ internal fun UserLogin() {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color.White),
+                    .background(backgroundColor),
                 contentAlignment = Alignment.TopCenter
             ) {
                 Image(
