@@ -1,33 +1,35 @@
 [versions]
-agp = "8.6.0-alpha02"
-arrowCore = "1.2.0"
-coilCompose = "2.5.0"
-composeShimmer = "1.2.0"
-converterGson = "2.9.0"
+agp = "8.9.0-alpha03"
+arrowCore = "1.2.4"
+coilCompose = "2.7.0"
+composeShimmer = "1.3.0"
+converterGson = "2.11.0"
 coreKtxVersion = "2.0.2-rc01"
 feather = "1.1.0"
-firebaseBom = "32.8.1"
+firebaseBom = "33.1.2"
 #noinspection GradleDependency
 fontawesomecompose = "1.1.0"
 glassmorphicComposables = "0.0.7"
-haze = "0.5.4"
-hazeMaterials = "0.5.4"
-hiltAndroid = "2.46"
+haze = "0.7.3"
+hazeMaterials = "0.7.3"
+hiltAndroid = "2.52"
 hiltNavigationCompose = "1.2.0"
-kotlin = "1.9.23"
-coreKtx = "1.13.0"
+kotlin = "2.0.10"
+compose-plugin = "1.6.10"
+coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-lifecycleRuntimeCompose = "2.7.0"
-lifecycleRuntimeKtx = "2.7.0"
-activityCompose = "1.9.0"
-composeBom = "2024.04.01"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeCompose = "2.8.4"
+lifecycleRuntimeKtx = "2.8.4"
+activityCompose = "1.9.1"
+composeBom = "2024.06.00"
 navigationCompose = "2.7.7"
-retrofit = "2.9.0"
+retrofit = "2.11.0"
 roomCompiler = "2.6.1"
-runtimeRxjava2 = "1.6.6"
-firebaseFirestore = "24.11.1"
+roomCompilerVersion = "2.6.1"
+runtimeRxjava2 = "1.6.8"
+firebaseFirestore = "25.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +37,7 @@ androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-com
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeCompose" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+androidx-room-compiler-v252 = { module = "androidx.room:room-compiler", version.ref = "roomCompilerVersion" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomCompiler" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomCompiler" }
 androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtimeRxjava2" }
@@ -74,4 +77,6 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

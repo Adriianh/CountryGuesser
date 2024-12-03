@@ -100,6 +100,18 @@ class AuthViewModel @Inject constructor(
         }
     }
 
+    fun insertUser(user: User) {
+        viewModelScope.launch {
+            handleLoading(true)
+
+            insertUserUseCase(user)
+                .onSuccess { setCurrentUser(user) }
+                .onFailure(::handleError)
+
+            handleLoading(false)
+        }
+    }
+
     fun getUser(id: Int) {
         viewModelScope.launch {
             handleLoading(true)
@@ -110,18 +122,6 @@ class AuthViewModel @Inject constructor(
                         handleSuccessUser(user)
                     }
                 }
-                .onFailure(::handleError)
-
-            handleLoading(false)
-        }
-    }
-
-    fun insertUser(user: User) {
-        viewModelScope.launch {
-            handleLoading(true)
-
-            insertUserUseCase(user)
-                .onSuccess { setCurrentUser(user) }
                 .onFailure(::handleError)
 
             handleLoading(false)

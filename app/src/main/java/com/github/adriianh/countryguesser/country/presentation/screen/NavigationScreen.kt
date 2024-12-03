@@ -4,12 +4,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.github.adriianh.countryguesser.country.presentation.screen.login.UserLogin
-import com.github.adriianh.countryguesser.country.presentation.screen.login.UserRegister
+import androidx.navigation.NavController
+import com.github.adriianh.countryguesser.country.presentation.screen.auth.UserLogin
+import com.github.adriianh.countryguesser.country.presentation.screen.auth.UserRegister
 import com.github.adriianh.countryguesser.country.presentation.viewmodel.AuthViewModel
 
 @Composable
-fun NavigationScreen() {
+fun NavigationScreen(navController: NavController) {
     val viewModel: AuthViewModel = hiltViewModel()
     val hasUsers by viewModel.hasUsers.collectAsState()
     val isLoggedIn by viewModel.hasSelectedAccount.collectAsState()
@@ -24,5 +25,5 @@ fun NavigationScreen() {
         return
     }
 
-    HomeScreen()
+    HomeScreen(navController)
 }

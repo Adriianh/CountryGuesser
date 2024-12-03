@@ -31,12 +31,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.github.adriianh.countryguesser.R
 import com.github.adriianh.countryguesser.country.domain.model.User
-import com.github.adriianh.countryguesser.country.presentation.ui.theme.Azure
-import com.github.adriianh.countryguesser.country.presentation.ui.theme.JordyBlue
-import com.github.adriianh.countryguesser.country.presentation.ui.theme.backgroundColor
 import com.github.adriianh.countryguesser.country.presentation.viewmodel.AuthViewModel
 import compose.icons.FeatherIcons
-import compose.icons.feathericons.CheckCircle
 import compose.icons.feathericons.User
 
 @Composable

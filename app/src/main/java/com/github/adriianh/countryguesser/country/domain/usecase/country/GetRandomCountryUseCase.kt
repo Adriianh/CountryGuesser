@@ -13,8 +13,9 @@ class GetRandomCountryUseCase @Inject constructor(
     private val selectedCountries by lazy { mutableListOf<Country>() }
 
     override suspend fun execute(params: CountryViewState): Country {
-        val availableCountries = params.countries
-            .filterNot { selectedCountries.contains(it) }
+        val availableCountries = countryRepository.getCountries().getOrNull()
+            ?.filter { !selectedCountries.contains(it) }
+            ?: emptyList()
 
         if (availableCountries.isEmpty()) {
             params.hasNextCountry = false

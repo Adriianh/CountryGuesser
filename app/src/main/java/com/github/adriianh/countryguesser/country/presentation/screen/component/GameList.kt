@@ -5,17 +5,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.github.adriianh.countryguesser.R
 import com.github.adriianh.countryguesser.country.presentation.util.Game
 
-@Preview
 @Composable
-fun GameList() {
+fun GameList(navController: NavController) {
     LazyRow {
         items(games.size) { index ->
             GameCard(
                 index = index,
-                onClick = {}
+                onClick = {
+                    navController.navigate(games[index].route)
+                }
             )
         }
     }
@@ -23,19 +25,22 @@ fun GameList() {
 
 val games = listOf(
     Game(
-        "Random Country",
-        R.drawable.logo,
-        getGradient(Color(0xFF00BFA5), Color(0xFF00B8D4))
+        route = "random_country",
+        name = "RANDOM COUNTRY",
+        image = R.drawable.logo,
+        color = getGradient(Color(0xFF9BB2E5), Color(0xFF698CBF))
     ),
     Game(
-        "Flag Quiz",
-        R.drawable.logo,
-        getGradient(Color(0xFF00BFA5), Color(0xFF00B8D4))
+        route = "guess_country_game",
+        name = "GUESS THE COUNTRY",
+        image = R.drawable.logo,
+        color = getGradient(Color(0xFF9BB2E5), Color(0xFF698CBF))
     ),
     Game(
-        "Capital Quiz",
-        R.drawable.logo,
-        getGradient(Color(0xFF00BFA5), Color(0xFF00B8D4))
+        route = "guess_capital",
+        name = "GUESS THE CAPITAL",
+        image = R.drawable.logo,
+        color = getGradient(Color(0xFF9BB2E5), Color(0xFF698CBF))
     )
 )
 

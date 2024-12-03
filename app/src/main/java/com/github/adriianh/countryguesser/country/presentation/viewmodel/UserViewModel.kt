@@ -4,6 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.adriianh.countryguesser.country.data.local.UserDao
 import com.github.adriianh.countryguesser.country.data.local.UserPreferences
+import com.github.adriianh.countryguesser.country.domain.model.User
+import com.github.adriianh.countryguesser.country.domain.usecase.user.GetUserUseCase
+import com.github.adriianh.countryguesser.country.domain.usecase.user.UpdateUserScore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,7 +19,12 @@ import javax.inject.Inject
 class UserViewModel @Inject constructor(
     private val userDao: UserDao,
     private val userPreferences: UserPreferences,
-    ) : ViewModel() {
+    private val getUserUseCase: GetUserUseCase,
+    private val updateUserScore: UpdateUserScore
+) : ViewModel() {
+    private val _state = MutableStateFlow(AuthViewState())
+    val state: StateFlow<AuthViewState> = _state.asStateFlow()
+
     private val _score = MutableStateFlow(userPreferences.getScore())
     val score: StateFlow<Int> = _score.asStateFlow()
 
@@ -33,17 +41,26 @@ class UserViewModel @Inject constructor(
         }
     }
 
-    fun updateScore(newScore: Int) {
-        viewModelScope.launch {
-            val user = userPreferences.getSelectedUser()
-            if (user != null) {
-                user.score = newScore
+    private fun handleSuccessUser(user: User) {
+        _state.update {
+            it.copy(selectedAccount = user)
+        }
+    }
 
-                userDao.updateUser(user)
-                _score.update {
-                    newScore
+    fun getUserScore(user: User) {
+        viewModelScope.launch {
+            getUserUseCase(user.id)
+                .onSuccess { liveData ->
+                    liveData.observeForever { user ->
+                        handleSuccessUser(user)
+                    }
                 }
-            }
+        }
+    }
+
+    fun updateUserScore(newScore: Int) {
+        viewModelScope.launch {
+            updateUserScore(Pair(userPreferences.getSelectedUser()!!, newScore))
         }
     }
 }

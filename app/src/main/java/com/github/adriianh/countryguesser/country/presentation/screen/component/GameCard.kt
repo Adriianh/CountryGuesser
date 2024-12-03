@@ -11,9 +11,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,11 +22,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.github.adriianh.countryguesser.R
 import compose.icons.FeatherIcons
-import compose.icons.feathericons.ArrowRightCircle
+import compose.icons.feathericons.Play
 
 @Composable
 fun GameCard(
@@ -60,6 +62,15 @@ fun GameCard(
                 .clickable { onClick() },
             verticalArrangement = Arrangement.SpaceBetween,
         ) {
+            Text(
+                text = game.name,
+                color = Color.White,
+                fontFamily = FontFamily(Font(R.font.monocraft_bold)),
+                fontSize = 15.sp,
+            )
+
+            Spacer(modifier = Modifier.height(10.dp))
+
             Image(
                 painter = painterResource(id = game.image),
                 contentDescription = null,
@@ -70,26 +81,28 @@ fun GameCard(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
+            FilledTonalButton(
+                onClick = { onClick() },
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Text(
-                    text = game.name,
-                    color = Color.White,
-                    fontSize = 17.sp,
-                    fontWeight = FontWeight.Bold
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "PLAY",
+                        color = Color.White,
+                        fontFamily = FontFamily(Font(R.font.monocraft_bold)),
+                        fontSize = 16.sp
+                    )
 
-                Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(4.dp))
 
-                Icon(
-                    imageVector = FeatherIcons.ArrowRightCircle,
-                    tint = Color.White,
-                    modifier = Modifier
-                        .size(30.dp),
-                    contentDescription = null
-                )
+                    Icon(
+                        imageVector = FeatherIcons.Play,
+                        contentDescription = null,
+                        tint = Color.White
+                    )
+                }
             }
         }
     }

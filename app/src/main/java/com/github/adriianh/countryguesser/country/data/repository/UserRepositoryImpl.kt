@@ -32,4 +32,8 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun updateUser(user: User) {
         userDao.updateUser(user)
     }
+
+    override suspend fun updateUserScore(id: Int, score: Int) {
+        userDao.updateUserScore(id, score)
+    }
 }

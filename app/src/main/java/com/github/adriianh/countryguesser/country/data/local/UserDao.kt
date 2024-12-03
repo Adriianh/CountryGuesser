@@ -23,6 +23,9 @@ interface UserDao {
     @Query("SELECT score FROM user WHERE id = :userId")
     suspend fun getScore(userId: Int): Int?
 
+    @Query("UPDATE user SET score = :score WHERE id = :userId")
+    suspend fun updateUserScore(userId: Int, score: Int)
+
     @Query("SELECT * FROM user WHERE id = :id")
     fun getUserById(id: Int): LiveData<User>
 
